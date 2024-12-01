@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #007BFF;
+        }
+
+        /* Clock and Date */
+        .clock-date {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .clock-date .date {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .clock-date .time {
+            font-size: 2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover Effects */
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-top: 40px;
+        }
+
+        .video-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .video {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock-date">
+        <div class="date" id="date"></div>
+        <div class="time" id="time"></div>
+    </div>
+
+    <header>
+        <h1>Gallery</h1>
+    </header>
+
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="IMG_8180.jpeg" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8117.jpeg" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8061.jpeg" alt="Gallery Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8088.jpeg" alt="Gallery Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8201.jpeg" alt="Gallery Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8103.jpeg" alt="Gallery Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8350.jpeg" alt="Gallery Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8257.jpeg" alt="Gallery Image 8">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_5938.jpeg" alt="Gallery Image 9">
+        </div>
+        <div class="gallery-item">
+            <img src="Untitled design copy.png" alt="Gallery Image 10">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_8385.jpeg" alt="Gallery Image 11">
+        </div>
+        <div class="gallery-item">
+            <img src="IMG_6802.jpeg" alt="Gallery Image 12">
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Videos</h2>
+        <div class="video-grid">
+            <div class="video">
+                <video controls>
+                    <source src="IMG_6169.MOV" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="IMG_8281.MOV" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="IMG_8269.MOV" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="93731d48-fa31-40aa-9ca3-e41e01b69775.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="5cd3f635-5a51-4142-9886-548134d141c4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const date = now.toLocaleDateString();
+
+            document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('date').textContent = date;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();  // Initialize immediately
+    </script>
+</body>
+
+</html>
+

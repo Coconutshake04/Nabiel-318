@@ -1,0 +1,134 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(#007BFF, #fff);
+}
+
+/* Contact Container */
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-left-title h2 {
+    font-weight: 600;
+    color: #0056b3;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #0c20fa;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: 2px solid transparent;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #0c20fa;
+    border-radius: 50px;
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    padding-left: 25px;
+    border-radius: 20px;
+    resize: none; /* Prevent resizing */
+}
+
+.contact-inputs:focus {
+    border-color: #ff994f;
+}
+
+.contact-inputs::placeholder {
+    color: #0c20fa;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #a13030;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #007BFF, #f9f9f9);
+    cursor: pointer;
+}
+
+.contact-left button img {
+    height: 15px;
+}
+
+.contact-right img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .contact-inputs {
+        width: 80vw;
+    }
+
+    .contact-right {
+        display: none;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    max-width: 800px; 
+    padding: 20px; 
+    background: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px; 
+}
+h1 {
+    color: #0056b3;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: bold;
+}
+iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    border: none; 
+    border-radius: 10px; 
+}
