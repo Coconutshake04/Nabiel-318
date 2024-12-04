@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - For More Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .contact-left {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .contact-left-title h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-left-title hr {
+            margin: 0 auto;
+            width: 50px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-inputs {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button img {
+            margin-left: 5px;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Map Section */
+        .container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Me Section */
+        .contact-me {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .contact-me p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .button-two {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media h3 {
+            margin-bottom: 10px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title"> 
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="ba04d2e6-491d-4c7d-92c7-00776f03c0a3">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit<img src="arrow_icon.png" alt="Arrow Icon"></button> 
+        </form>
+    </div>
+
+
+    <div class="container">
+        <h1>Find Me</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3950.962187815558!2d102.26309753331275!3d2.2524390715378377!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e55703157657%3A0xfed5cef054e0c8a5!2s42%2C%20Jalan%20SJ%201%2F12%2C%20Taman%20Seri%20Jati%2C%2075350%20Melaka!5e1!3m2!1sen!2smy!4v1732558723443!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div id="contact" class="contact-me">
+        <p>How to keep in touch with me</p>
+        <a class="button-two" href="Contact Me 2.html">Contact Me</a>
+        <div class="social-media">
+          <h3>Follow Me</h3>
+          <a href="https://www.instagram.com/" target="_blank" class="social-icon">Instagram</a>
+          <a href="https://www.youtube.com/@BibliotecaSegamat" target="_blank" class="social-icon">YouTube</a>
+        </div>
+    </div>
+</body>
+</html>
